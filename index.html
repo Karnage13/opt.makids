@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKIDS - Оптовые поставки детской одежды</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== ОСНОВНЫЕ НАСТРОЙКИ ===== */
+        :root {
+            --color-text: #1a1a1a;
+            --color-text-light: #666;
+            --color-background: #ffffff;
+            --color-border: #e0e0e0;
+            --color-accent: #8787d5;
+            --color-accent-dark: #6969b7;
+            --color-accent-light: #e6e6f8;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">MAKIDS</a>
+            
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="#about">О бренде</a></li>
+                    <li><a href="#conditions">Условия</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#info">Информация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- БАННЕР -->
+    <section class="hero-banner" id="home">
+        <div class="banner-image"></div>
+        <div class="banner-button">
+            <a href="#contacts" class="btn btn-primary">Стать партнёром</a>
+        </div>
+    </section>
+
+    <!-- ТЕКСТ В ДВЕ КОЛОНКИ -->
+    <section class="two-columns" id="about">
+        <div class="container columns-container">
+            <div class="column">
+                <h2>MAKIDS - создаём яркую одежду, которая помогает родителям делать детство ярче</h2>
+            </div>
+            <div class="column">
+                <p>Собственное производство и уникальный дизайн.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАРУСЕЛЬ -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наша продукция</h2>
+                <p>Яркие и качественные модели для детей</p>
+            </div>
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1c458e4222?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1558769132-92c6e75b8c0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ТЕКСТ В СТРОКУ -->
+    <section class="text-rows">
+        <div class="container text-rows-container">
+            <div class="text-row">Бренд №1 по стилю и красочности</div>
+            <div class="text-row">1000+ кв.метров собственного производства</div>
+            <div class="text-row">ТОП в категории детской одежды</div>
+            
+            <div class="animated-btn-container">
+                <a href="#contacts" class="btn btn-primary">Стать партнёром</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛОВИЯ С ПАЗЛАМИ -->
+    <section class="conditions" id="conditions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Условия для оптовых закупок</h2>
+                <p>Выберите подходящий для вас уровень сотрудничества</p>
+            </div>
+            
+            <div class="conditions-container">
+                <div class="levels">
+                    <div class="levels-list">
+                        <!-- Уровень 1 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">1</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 1</h3>
+                                <p>От 30.000 руб. сумма заказа</p>
+                                <p><strong>20% скидка</strong></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Уровень 2 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">2</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 2</h3>
+                                <p>От 50.000 руб. сумма заказа</p>
+                                <p><strong>25% скидка</strong></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Уровень 3 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">3</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 3</h3>
+                                <p>От 80.000 руб. сумма заказа</p>
+                                <p><strong>30% скидка</strong></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Уровень 4 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">4</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 4</h3>
+                                <p>От 150.000 руб. сумма заказа</p>
+                                <p><strong>35% скидка</strong></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Уровень 5 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">5</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 5</h3>
+                                <p>От 250.000 руб. сумма заказа</p>
+                                <p><strong>40% скидка</strong></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Уровень 6 -->
+                        <div class="level-item">
+                            <div class="puzzle-container">
+                                <div class="puzzle-piece puzzle-left">
+                                    <div class="puzzle-text">Уровень</div>
+                                </div>
+                                <div class="puzzle-piece puzzle-right">
+                                    <div class="puzzle-number">6</div>
+                                </div>
+                            </div>
+                            <div class="level-details">
+                                <h3>Уровень 6</h3>
+                                <p>От 400.000 руб. сумма заказа</p>
+                                <p><strong>45% скидка</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conditions-info">
+                    <h2>Сотрудничайте с нами</h2>
+                    <p>Мы предлагаем гибкие условия для оптовых покупателей. Чем больше сумма заказа, тем выше скидка и выгоднее условия сотрудничества.</p>
+                    <p>Наши менеджеры помогут подобрать оптимальный ассортимент для вашего региона и сезона.</p>
+                    <a href="#contacts" class="btn btn-primary" style="margin-top: 20px;">Связаться с менеджером</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БАННЕР С КНОПКОЙ -->
+    <section class="banner-btn">
+        <div class="container">
+            <h2>Начните сотрудничество с Makids уже сегодня</h2>
+            <a href="#contacts" class="btn btn-secondary">Узнать условия заказа</a>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ - НАШЕ ПРОИЗВОДСТВО -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наше производство</h2>
+                <p>Современное оборудование и контроль качества</p>
+            </div>
+            
+            <div class="gallery-container">
+                <!-- Левая часть с изображениями -->
+                <div class="gallery-images">
+                    <!-- Большое изображение -->
+                    <div class="gallery-main"></div>
+                    
+                    <!-- Маленькие изображения справа -->
+                    <div class="gallery-side">
+                        <div class="small-image"></div>
+                        <div class="small-image"></div>
+                        <div class="small-image"></div>
+                    </div>
+                </div>
+                
+                <!-- Текст справа -->
+                <div class="gallery-text">
+                    <h2>Наши оптовые клиенты увеличили продажи за счёт уникальности нашего ассортимента</h2>
+                    <p>Мы постоянно обновляем коллекции, следим за трендами и предлагаем то, что действительно нравится детям и родителям.</p>
+                    <a href="#conditions" class="btn btn-primary">Посмотреть условия</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАРУСЕЛЬ В ДВА РЯДА -->
+    <section class="double-carousel">
+        <div class="container">
+            <div class="section-title">
+                <h2>Популярные модели</h2>
+                <p>Самые востребованные позиции</p>
+            </div>
+            
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1558769132-92c6e75b8c0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1c458e4222?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БАННЕР С КНОПКОЙ -->
+    <section class="banner-btn">
+        <div class="container">
+            <h2>Готовы стать нашим партнером?</h2>
+            <a href="#contacts" class="btn btn-primary">Узнать условия заказа</a>
+        </div>
+    </section>
+
+    <!-- ИНФОРМАЦИОННЫЙ БЛОК -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Информация для оптовых покупателей</h2>
+                <p>Все условия сотрудничества</p>
+            </div>
+            
+            <div class="info-container">
+                <div class="info-item">
+                    <h3>Менеджер всегда на связи</h3>
+                    <p>Персональный менеджер ответит на все вопросы</p>
+                    <a href="#contacts" class="btn btn-primary" style="margin-top: 15px; padding: 10px 20px;">Связаться</a>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Мин. сумма для оптового заказа</h3>
+                    <p><strong>От 30.000 руб.</strong> - минимальная сумма заказа</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Формирование заказа</h3>
+                    <p>Заказ можно формировать без размерных рядов</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Доставка</h3>
+                    <p>Отгрузка: Почта России, СДЭК, Деловые Линии, Байкал, ПЭК</p>
+                    <p>Возможен самовывоз</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Размер оптовой скидки</h3>
+                    <p>Определяется от суммы заказа</p>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Посмотреть уровни скидок</button>
+                        <div class="dropdown-content">
+                            <p><strong>От 30.000 руб.</strong> - скидка 20%</p>
+                            <p><strong>От 50.000 руб.</strong> - скидка 25%</p>
+                            <p><strong>От 80.000 руб.</strong> - скидка 30%</p>
+                            <p><strong>От 150.000 руб.</strong> - скидка 35%</p>
+                            <p><strong>От 250.000 руб.</strong> - скидка 40%</p>
+                            <p><strong>От 400.000 руб.</strong> - скидка 45%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Оплата и сроки</h3>
+                    <p>Отгрузка товара осуществляется после 100% оплаты</p>
+                    <p>Срок изготовления и сборки заказа: <strong>5-14 рабочих дней</strong></p>
+                    <p>Наш ассортимент полностью сертифицирован</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Контакты</h3>
+                        <p>413864 г. Балаково, Саратовская область</p>
+                        <p>ул. Трнавская 34, 2 этаж</p>
+                        <p>opt-makids@mail.ru</p>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Быстрые ссылки</h3>
+                        <a href="#about">О бренде</a>
+                        <a href="#conditions">Условия опта</a>
+                        <a href="#gallery">Галерея</a>
+                        <a href="#info">Информация</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Сотрудничество</h3>
+                        <p>Станьте партнером MAKIDS и получите выгодные условия</p>
+                        <a href="#contacts" class="btn btn-secondary" style="margin-top: 20px;">Стать партнёром</a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 MAKIDS. Все права защищены.</p>
+                    <p>Детская одежда оптом от производителя</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- СКРИПТЫ -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Мобильное меню
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mainMenu = document.getElementById('main-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('show');
+        });
+        
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('show');
+            });
+        });
+        
+        // Карусели
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+        
+        const swiper2 = new Swiper('.mySwiper2', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+        
+        // Выпадающее меню
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('show');
+            });
+        });
+        
+        // Закрыть выпадающее меню при клике вне его
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-btn')) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    content.classList.remove('show');
+                });
+            }
+        });
+        
+        // Фиксированная шапка
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
