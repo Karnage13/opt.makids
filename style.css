@@ -157,23 +157,23 @@ nav a:hover::after {
 /* ===== БАННЕР ===== */
 .hero-banner {
     position: relative;
-    height: 400px;
     width: 100%;
     max-width: 1200px;
     margin: 80px auto 40px;
     overflow: hidden;
+    border: 1px solid var(--color-border);
 }
 
+/* Изображение баннера - сохраняет пропорции */
 .banner-image {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-bottom: 50%; /* Соотношение сторон 2:1 */
     background-image: url('ban.jpg');
-    background-size: cover;
+    background-size: contain; /* Вместо cover - чтобы всё изображение было видно */
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #f8f8f8;
 }
 
 .banner-button {
@@ -243,6 +243,15 @@ nav a:hover::after {
     background-position: center;
 }
 
+/* Цветные блоки для карусели */
+.slide-1 { background-color: #8787d5; }
+.slide-2 { background-color: #ff6b9d; }
+.slide-3 { background-color: #6bd8ff; }
+.slide-4 { background-color: #ffd166; }
+.slide-5 { background-color: #06d6a0; }
+.slide-6 { background-color: #ef476f; }
+.slide-7 { background-color: #118ab2; }
+
 /* ===== ТЕКСТ В СТРОКУ ===== */
 .text-rows {
     background: var(--color-background);
@@ -268,7 +277,7 @@ nav a:hover::after {
     margin-top: 30px;
 }
 
-/* ===== БЛОК УСЛОВИЙ С ПАЗЛАМИ ===== */
+/* ===== БЛОК УСЛОВИЙ ===== */
 .conditions {
     background: #f8f8f8;
 }
@@ -299,95 +308,22 @@ nav a:hover::after {
     border: 1px solid var(--color-border);
 }
 
-/* Контейнер для пазлов */
-.puzzle-container {
-    position: relative;
-    width: 120px;
-    height: 80px;
-    flex-shrink: 0;
-    display: flex;
-}
-
-/* Стили для реалистичных пазлов */
-.puzzle-piece {
-    position: relative;
-    width: 60px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
-}
-
-.puzzle-text {
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    color: var(--color-text);
-    padding: 0 5px;
-}
-
-.puzzle-number {
+.level-number {
+    font-size: 20px;
     font-weight: 800;
-    font-size: 24px;
     color: var(--color-text);
-}
-
-/* Левый пазл с выступом справа */
-.puzzle-left {
-    position: relative;
-    z-index: 2;
-}
-
-.puzzle-left::after {
-    content: '';
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 18px;
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
-    border-left: none;
-    clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
-}
-
-/* Правый пазл с выемкой слева */
-.puzzle-right {
-    margin-left: -1px;
-    position: relative;
-    z-index: 1;
-}
-
-.puzzle-right::before {
-    content: '';
-    position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 18px;
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
-    border-right: none;
-    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
+    min-width: 100px;
+    flex-shrink: 0;
 }
 
 .level-details {
     flex: 1;
 }
 
-.level-details h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
 .level-details p {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--color-text-light);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .conditions-info {
@@ -436,7 +372,7 @@ nav a:hover::after {
     flex-wrap: wrap;
 }
 
-/* Левая часть с изображениями */
+/* Левая часть с цветными блоками */
 .gallery-images {
     flex: 1.5;
     display: flex;
@@ -444,15 +380,14 @@ nav a:hover::after {
     min-width: 300px;
 }
 
-/* Большое изображение */
+/* Большой цветной блок */
 .gallery-main {
     flex: 2;
-    background-color: #8787d5;
     position: relative;
     border: 1px solid var(--color-border);
 }
 
-/* Маленькие изображения справа */
+/* Маленькие цветные блоки справа */
 .gallery-side {
     flex: 1;
     display: flex;
@@ -460,19 +395,24 @@ nav a:hover::after {
     margin-left: -1px;
 }
 
-/* Каждое маленькое изображение */
+/* Каждый маленький блок */
 .small-image {
     flex: 1;
-    background-color: #6969b7;
     border: 1px solid var(--color-border);
     border-left: none;
     position: relative;
 }
 
-/* Убираем верхнюю границу у всех кроме первого маленького изображения */
+/* Убираем верхнюю границу у всех кроме первого блока */
 .small-image:not(:first-child) {
     border-top: none;
 }
+
+/* Цвета для блоков галереи */
+.color-block-1 { background-color: #8787d5; }
+.color-block-2 { background-color: #6969b7; }
+.color-block-3 { background-color: #ff6b9d; }
+.color-block-4 { background-color: #6bd8ff; }
 
 .gallery-text {
     flex: 1;
@@ -639,8 +579,11 @@ footer {
     }
     
     .hero-banner {
-        height: 350px;
         margin: 70px auto 30px;
+    }
+    
+    .banner-image {
+        padding-bottom: 60%; /* Более квадратное соотношение на планшетах */
     }
     
     .columns-container {
@@ -665,6 +608,11 @@ footer {
     
     .banner-btn h2 {
         font-size: 24px;
+    }
+    
+    .level-number {
+        font-size: 18px;
+        min-width: 90px;
     }
 }
 
@@ -695,8 +643,12 @@ footer {
     }
     
     .hero-banner {
-        height: 280px;
         margin: 60px auto 20px;
+    }
+    
+    .banner-image {
+        padding-bottom: 70%; /* Выше соотношение для телефонов */
+        background-size: contain;
     }
     
     .banner-button {
@@ -721,25 +673,12 @@ footer {
     .level-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 10px;
     }
     
-    .puzzle-container {
-        width: 100px;
-        height: 70px;
-    }
-    
-    .puzzle-piece {
-        width: 50px;
-        height: 70px;
-    }
-    
-    .puzzle-text {
-        font-size: 11px;
-    }
-    
-    .puzzle-number {
-        font-size: 20px;
+    .level-number {
+        min-width: 100%;
+        font-size: 18px;
     }
     
     .gallery-container {
@@ -788,8 +727,13 @@ footer {
     }
     
     .hero-banner {
-        height: 220px;
         margin: 50px auto 15px;
+        border: none;
+    }
+    
+    .banner-image {
+        padding-bottom: 80%; /* Почти квадратное для маленьких телефонов */
+        background-size: contain;
     }
     
     .column {
@@ -829,62 +773,4 @@ footer {
         font-size: 22px;
     }
     
-    .banner-btn h2 {
-        font-size: 20px;
-    }
-    
-    .gallery-images {
-        min-height: 250px;
-    }
-    
-    .small-image {
-        height: 80px;
-    }
-    
-    .gallery-text h2 {
-        font-size: 20px;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-
-/* Очень маленькие телефоны (до 375px) */
-@media (max-width: 375px) {
-    .logo {
-        font-size: 20px;
-    }
-    
-    .hero-banner {
-        height: 200px;
-    }
-    
-    .text-row {
-        font-size: 15px;
-    }
-    
-    .puzzle-container {
-        width: 90px;
-        height: 60px;
-    }
-    
-    .puzzle-piece {
-        width: 45px;
-        height: 60px;
-    }
-    
-    .puzzle-number {
-        font-size: 18px;
-    }
-    
-    .small-image {
-        height: 70px;
-    }
-    
-    .dropdown-btn {
-        padding: 10px;
-        font-size: 13px;
-    }
-}
+    .banner-btn h2
