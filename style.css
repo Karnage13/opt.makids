@@ -161,7 +161,6 @@ nav a:hover::after {
     max-width: 1200px;
     margin: 80px auto 40px;
     overflow: hidden;
-    border: 1px solid var(--color-border);
 }
 
 /* Изображение баннера - сохраняет пропорции */
@@ -170,17 +169,34 @@ nav a:hover::after {
     height: 0;
     padding-bottom: 50%; /* Соотношение сторон 2:1 */
     background-image: url('ban.jpg');
-    background-size: contain; /* Вместо cover - чтобы всё изображение было видно */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f8f8f8;
 }
 
+/* Кнопка на баннере - ЛЕВЫЙ НИЖНИЙ УГОЛ */
 .banner-button {
     position: absolute;
     z-index: 2;
-    bottom: 20px;
-    left: 20px;
+    bottom: 140px;
+    left: 80px;
+}
+
+/* Стиль для кнопки на баннере */
+.banner-button .btn {
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+    padding: 14px 32px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(135, 127, 213, 0.3);
+}
+
+.banner-button .btn:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(135, 127, 213, 0.4);
 }
 
 /* ===== ТЕКСТ В ДВЕ КОЛОНКИ ===== */
@@ -586,6 +602,11 @@ footer {
         padding-bottom: 60%; /* Более квадратное соотношение на планшетах */
     }
     
+    .banner-button {
+        bottom: 75px;
+        left: 25px;
+    }
+    
     .columns-container {
         gap: 30px;
     }
@@ -652,13 +673,13 @@ footer {
     }
     
     .banner-button {
-        bottom: 15px;
-        left: 15px;
+        bottom: 75px;
+        left: 20px;
     }
     
     .banner-button .btn {
-        padding: 10px 20px;
-        font-size: 13px;
+        padding: 12px 24px;
+        font-size: 14px;
     }
     
     .section-title h2 {
@@ -728,12 +749,21 @@ footer {
     
     .hero-banner {
         margin: 50px auto 15px;
-        border: none;
     }
     
     .banner-image {
         padding-bottom: 80%; /* Почти квадратное для маленьких телефонов */
         background-size: contain;
+    }
+    
+    .banner-button {
+        bottom: 75px;
+        left: 15px;
+    }
+    
+    .banner-button .btn {
+        padding: 10px 20px;
+        font-size: 13px;
     }
     
     .column {
@@ -773,4 +803,24 @@ footer {
         font-size: 22px;
     }
     
-    .banner-btn h2
+    .banner-btn h2 {
+        font-size: 20px;
+    }
+    
+    .gallery-images {
+        min-height: 250px;
+    }
+    
+    .small-image {
+        height: 80px;
+    }
+    
+    .gallery-text h2 {
+        font-size: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
